@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import x from './components/Test.vue'
+export  default {}
 </script>
 
 
