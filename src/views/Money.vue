@@ -3,11 +3,11 @@
             <number-pad/>
             <types :xxx=" 333 "/>
            <notes/>
-           <tags/>
+           <tags :data-source="tags"/>
         </Layout>
 </template>
 
-<script lang="ts">
+<script >
     import Nav from '@/components/Nav.vue';
     import NumberPad from '@/components/Money/NumberPad.vue';
     import Types from '@/components/Money/Types.vue';
@@ -15,7 +15,12 @@
     import Tags from '@/components/Money/Tags.vue';
     export default {
         name: 'money',
-        components: {Tags, Notes, Types, NumberPad, Nav}
+        components: {Tags, Notes, Types, NumberPad, Nav},
+        data(){
+            return{
+                tags:['衣','食','住','行']
+            }
+        }
     };
 </script>
 <style lang="scss">
