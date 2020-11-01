@@ -1,7 +1,8 @@
 <template>
-    <div>
+    <Layout>
         编辑标签
-    </div>
+    </Layout>
+
 </template>
 
 <script lang="ts">
@@ -21,7 +22,7 @@
            if(tag){
                console.log(tag);
            }else{
-               this.$router.push('/404');
+               this.$router.replace('/404');
            }
        }
     };
