@@ -32,7 +32,7 @@
 
 
     @Component({
-        components: {FormItem, Tags,  Types, NumberPad, },
+        components: {FormItem, Tags,  Types, NumberPad },
     })
     export default  class Money extends Vue{
         tags= tagList;

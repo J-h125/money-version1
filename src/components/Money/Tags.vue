@@ -7,8 +7,7 @@
             <li v-for="tag in dataSource" :key="tag.id"
             :class="{selected:selectedTags.indexOf(tag)>=0}"
             @click="toggle(tag)">{{tag.name}}
-            >{{tag}}</li>
-
+           </li>
         </ul>
     </div>
 </template>
@@ -16,9 +15,10 @@
 <script lang="ts">
     import Vue from 'vue';
     import {Component,Prop} from 'vue-property-decorator';
+
     @Component
     export default class Tags extends Vue{
-      @Prop() readonly dataSource   :string[] | undefined;
+      @Prop() readonly dataSource: string[] | undefined;
        selectedTags:string[] = [];
 
        toggle(tag:string){
