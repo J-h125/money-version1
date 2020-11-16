@@ -2,8 +2,14 @@ type RecordItem = {
     tags:string[],
     notes:string,
     type:string,
-    amount:number
-    createdAt?: Date
+    amount:number,
+    createdAt?: String
+}
+
+type RootState = {
+    recordList: RecordItem[],
+    tagList: Tag[],
+    currentTag?: Tag
 }
 type Tag = {
     id:string;
