@@ -127,7 +127,8 @@
         .type-tabs-item {
           background: #C4C4C4;
             &.selected {
-              background: white;
+              background: #333;
+              color: white;
                 &::after {
                     display: none;
                 }

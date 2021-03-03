@@ -42,6 +42,7 @@
             }
         }
         > .item.selected{
+            font-weight: bold;
             color:$color-highlight;
         }
     }

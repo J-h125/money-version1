@@ -13,7 +13,7 @@
             <button @click="inputContent">7</button>
             <button @click="inputContent">8</button>
             <button @click="inputContent">9</button>
-            <button @click="ok" class="ok">OK</button>
+            <button @click="ok" class="ok">完成</button>
             <button class="zero" @click="inputContent">0</button>
             <button @click="inputContent">.</button>
         </div>
@@ -77,6 +77,7 @@
 
             > button{
                 @extend %clearFix;
+                cursor: pointer;
                 width: 25%;
                 height:64px;
                 float: left;
@@ -111,6 +112,9 @@
                 &:nth-child(12){
                     background: darken($bg,4*6%);
                 }
+            }
+           > button:active{
+                opacity: 0.5;
             }
         }
     }

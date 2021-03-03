@@ -23,7 +23,6 @@
         height: 100vh;
     }
     .content{
-
         overflow: auto;
         flex-grow:1;
     }

@@ -49,9 +49,11 @@
            }
        }
        remove(){
+         console.log('bbb')
             if(this.currentTag){
                 this.$store.commit('removeTag',this.currentTag.id);
             }
+
        }
        goBack(){
            this.$router.back();

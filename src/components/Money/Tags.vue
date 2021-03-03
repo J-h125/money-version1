@@ -1,14 +1,14 @@
 <template>
     <div class="tags">
         <div class="new">
-            <button @click="createTag">新增标签</button>
+            <button @click="createTag"><Icon name="plus"/>新增标签</button>
         </div>
         <ul class="current">
             <li v-for="tag in tagList" :key="tag.id"
             :class="{selected:selectedTags.indexOf(tag)>=0}"
             @click="toggle(tag)">{{tag.name}}
            </li>
-        </ul>
+         </ul>
     </div>
 </template>
 
@@ -44,6 +44,7 @@
 
 <style lang="scss" scoped>
     .tags{
+       
         background: white;
         font-size: 14px;
         padding: 16px;
@@ -51,6 +52,7 @@
         display: flex;
         flex-direction: column-reverse;
         > .current{
+           
             display: flex;
             flex-wrap: wrap;
 
@@ -71,13 +73,22 @@
             }
         }
         > .new{
+            
             padding-top: 16px;
             button{
-                background: transparent;
-                border: none;
-                color:#999;
-                border-bottom: 1px solid;
+                cursor: pointer;
+                background: #5a5a5a;
+                color:white;
                 padding:0 3px;
+                border: none;
+                border-radius:12px ;
+                padding: 4px 8px;
+                .icon{
+                    
+                    height: 1.5em;
+                    width: 1.5em;
+                   vertical-align:bottom;
+                }
             }
         }
     }
